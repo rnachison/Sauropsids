@@ -11,7 +11,11 @@
 		<% end %>
 <% end %>
 
-<%= button_to 'ADOPT ME', :action => 'adopt' %>
+<% if @sauropsid.is_adopted == true %>
+	<p>Already found a home!</p>
+<% else %>
+	<%= button_to 'ADOPT ME', :action => 'adopt' %>
+<% end %>
 
 <%= link_to 'Home', sauropsids_path %>
 

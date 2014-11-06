@@ -52,6 +52,7 @@ class SauropsidsController < ApplicationController
 	def adopt
 		@sauropsid = Sauropsid.find(params[:id])
 		if current_user != nil
+			@sauropsid.update_attributes(:is_adopted => "true")
 			@user = User.find(current_user)
 			@user.sauropsids << @sauropsid
 			redirect_to user_path
