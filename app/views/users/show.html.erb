@@ -1,5 +1,9 @@
-<% current_user.sauropsids.each do |s| %>
+<% if current_user  %>
+	<% current_user.sauropsids.each do |s| %>
 
-	<%= s.name %>
+		<%= s.name %>
 
+	<% end %>
+<% else %>
+	Log in please!
 <% end %>

@@ -1,0 +1,59 @@
+$headline: 'Great Vibes', cursive;
+$paragraph: 'Bad Script', cursive;
+$handwriting: 'Homemade Apple', cursive;
+$textcolor: rgb(5, 85, 93);
+$peach: rgb(255, 146, 113);
+$lavender: rgb(255, 146, 155);
+$whitesmoke: rgb(248,248,248);
+
+body.ptero_index {
+
+	height: 100%;
+	width: 100%;
+	background-color: $peach;
+
+	.navbar {
+
+		// background-color: rgba(153, 142, 129, .8);
+		border-bottom: 6px solid $lavender;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+
+		.saur_bar {
+
+			font-family: $paragraph;
+			color: $peach;
+		}
+
+
+		.user_header {
+
+			padding: 15px 0px;
+			font-size: 18px;
+			line-height: 20px;
+			height: 50px;
+		}
+
+	}
+
+	#ptero_headline {
+		text-align: center;
+		font-family: $handwriting;
+		font-size: 80px;
+		margin-top: 100px;
+		color: $whitesmoke;
+	}
+
+	#ptero_info {
+
+		height: 100px;
+		width: 300px;
+		background-color: $whitesmoke;
+		margin: auto;
+		border: 5px solid $lavender;
+		border-radius: 15px;
+
+	}
+	
+
+}
