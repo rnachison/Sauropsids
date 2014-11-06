@@ -1,7 +1,7 @@
 <% if current_user %>
 	<% if current_user.email == "rrn2110@columbia.edu" %>
+		<h2>EDIT SAUROPSID</h2>
 		<%= form_for @sauropsid do |s| %>
-			<h2>ADD NEW SAUROPSIDA</h2>
 			<p>
 				Order:<%= s.text_field :order %>
 			</p>
@@ -18,19 +18,22 @@
 				Location:<%= s.text_field :location %>
 			</p>
 			<p>
+				Length:<%= s.text_field :length %>
+			</p>
+			<p>
 				Wingspan:<%= s.text_field :wingspan %>
 			</p>
 			<p>
 				Weight:<%= s.text_field :weight %>
 			</p>
 			<p>
-				Length:<%= s.text_field :length %>
+				<%= s.submit "UPDATE" %>
 			</p>
 			<p>
-				<%= s.submit "ADD" %>
+				<%= link_to 'DELETE', delete_sauropsid_path(s), :action => 'destroy', :method => 'delete', :confirm => 'Are you sure?' %>
 			</p>
 		<% end %>
-			<% else %>
+	<% else %>
 		UNAUTHORIZED
 	<% end %>
 <% else %>

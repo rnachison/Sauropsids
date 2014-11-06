@@ -1,0 +1,14 @@
+<%= @sauropsid.name %>
+<%= @sauropsid.location %>
+<%= @sauropsid.age %>
+<%= @sauropsid.species %>
+<% if @sauropsid.order == 'pterosaur' %>
+	<%= @sauropsid.wingspan %>
+	<%= @sauropsid.weight %>
+<% else %>
+	<% if @sauropsid.order == 'ichthyosaur' %>
+		<%= @sauropsid.length %>
+		<% end %>
+<% end %>
+
+<%= link_to 'Home', sauropsids_path %>

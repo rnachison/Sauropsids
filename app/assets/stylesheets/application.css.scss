@@ -12,3 +12,14 @@
  *= require_tree .
  */
  @import 'bootstrap';
+
+
+$paragraph: 'Bad Script', cursive;
+$peach: rgb(255, 146, 113);
+
+.user_header {
+
+	text-align: right;
+	font-family: $paragraph;
+	color: $peach;
+}
