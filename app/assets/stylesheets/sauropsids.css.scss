@@ -1,0 +1,81 @@
+$headline: 'Great Vibes', cursive;
+$paragraph: 'Bad Script', cursive;
+$handwriting: 'Homemade Apple', cursive;
+$textcolor: rgb(5, 85, 93);
+$peach: rgb(255, 146, 113);
+$lavender: rgb(255, 146, 155);
+
+
+// INDEX/ROOT/WELCOME PAGE
+
+body.chordate_index {
+
+	background-image: url(image_path('dino_fight.jpg'));
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+
+
+	#welcome {
+
+		// height: 150px;
+		// width: 400px;
+		// margin: auto;
+		// background-color: rgba(153, 142, 129, .5);
+		// border: 1px solid $lavender;
+		// border-radius: 30px;
+
+			font-family: $handwriting;
+			font-size: 108px;
+			color: $peach
+
+	}
+
+	#sky_paragraph {
+
+		height: 60px;
+		width: 840px / 1197px * 100%;
+		background-color: rgba(153, 142, 129, .65);
+		margin: 300px auto 0 auto;
+		border: 4px solid $lavender;
+		border-radius: 10px;
+
+		p {
+			font-family: $handwriting;
+			font-size: 22px;
+			color: $peach;
+			margin: auto;
+			padding-top: 12px;
+		}
+
+	}
+
+	.pet_option {
+		margin: 50px auto 0px auto;
+		height: 60px;
+		background-color: rgba(153, 142, 129, .6);
+		border: 4px solid $lavender;
+		border-radius: 10px;
+		width: 678px;
+
+		.index_button {
+			display: inline;
+			border-radius: 50px;
+			margin: 6px 40px auto 40px;
+			height: 40px;
+			width: 133px;
+			background-color: $peach;
+			border: 4px solid $lavender;
+			color: rgba(107, 99, 90, 1);
+		}
+
+		.index_button_text {
+			text-decoration: none;
+			font-family: $paragraph;
+		}
+	}
+
+
+}

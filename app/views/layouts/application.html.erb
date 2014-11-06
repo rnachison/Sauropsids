@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adopt a Sauropsid!</title>
+  <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="container">
+		<div class="user_header">
+			<% if current_user %>
+			  <%= current_user.email %>.
+			  <%= link_to "Log Out", logout_path, :class => "user_header" %>
+			<% else %>
+			  <%= link_to "Sign Up", signup_path, :class => "user_header" %> or
+			  <%= link_to "Log In", login_path, :class => "user_header" %>
+			<% end %>
+		</div>
+		<% flash.each do |name,msg| %>
+			<%= content_tag :div, msg, id: "flash_#{name}" %>
+		<% end %>
+
+<%= yield %>
+
+</body>
+</html>

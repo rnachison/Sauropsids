@@ -1,0 +1,30 @@
+		<%= form_for @sauropsid do |s| %>
+			<h2>ADD NEW SAUROPSIDA</h2>
+			<p>
+				Order:<%= s.text_field :order %>
+			</p>
+			<p>
+				Name:<%= s.text_field :name %>
+			</p>
+			<p>
+				Age:<%= s.text_field :age %>
+			</p>
+			<p>
+				Species:<%= s.text_field :species %>
+			</p>
+			<p>
+				Location:<%= s.text_field :location %>
+			</p>
+			<p>
+				Wingspan:<%= s.text_field :wingspan %>
+			</p>
+			<p>
+				Weight:<%= s.text_field :weight %>
+			</p>
+			<p>
+				Length:<%= s.text_field :length %>
+			</p>
+			<p>
+				<%= s.submit "ADD" %>
+			</p>
+		<% end %>
