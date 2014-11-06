@@ -1,5 +1,5 @@
 class SauropsidsController < ApplicationController
-		def index
+	def index
 		@sauropsids = Sauropsid.all
 	end
 
@@ -47,5 +47,17 @@ class SauropsidsController < ApplicationController
 	def ichthyosaur_index
 		order_filter = params[:sauropsidfilter]
 		@sauropsids = Sauropsid.where(:order => "ichthyosaur")
+	end
+
+	def adopt
+		@sauropsid = Sauropsid.find(params[:id])
+		if current_user != nil
+			@user = User.find(current_user)
+			@user.sauropsids << @sauropsid
+			redirect_to user_path
+		else
+			flash.notice = 'Please log in before adopting a pet'
+			redirect_to sauropsid_path
+		end
 	end
 end

@@ -27,6 +27,8 @@ SauropsAdopts::Application.routes.draw do
 
   delete 'sauropsids/:id' => 'sauropsids#destroy', as: :delete_sauropsid
 
+  post 'sauropsids/:id/adopt' => 'sauropsids#adopt', as: :adopt
+
 
 
 
