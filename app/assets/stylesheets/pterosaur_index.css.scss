@@ -3,8 +3,9 @@ $paragraph: 'Bad Script', cursive;
 $handwriting: 'Homemade Apple', cursive;
 $textcolor: rgb(5, 85, 93);
 $peach: rgb(255, 146, 113);
-$lavender: rgb(255, 146, 155);
+$coral: rgb(255, 146, 155);
 $whitesmoke: rgb(248,248,248);
+$lavender: rgb(250, 133, 255);
 
 body.ptero_index {
 
@@ -28,10 +29,15 @@ body.ptero_index {
 
 		.user_header {
 
-			padding: 15px 0px;
+			padding: 15px 5px;
 			font-size: 18px;
 			line-height: 20px;
 			height: 50px;
+			text-decoration: none;
+		}
+
+		.user_header:hover {
+			color: $lavender;
 		}
 
 	}
@@ -46,13 +52,42 @@ body.ptero_index {
 
 	#ptero_info {
 
-		height: 100px;
+		// height: 100px;
 		width: 300px;
 		background-color: $whitesmoke;
 		margin: auto;
+		padding-bottom: 10px;
 		border: 5px solid $lavender;
 		border-radius: 15px;
 
+
+		.ptero_list {
+
+			color: $peach;
+			text-align: center;
+			padding-left: 0px;
+			font-family: $paragraph;
+			font-size: 20px;
+
+			#ptero_list_name {
+			color: $lavender;
+			text-decoration: none;
+			}
+
+			#ptero_list_name:hover {
+				color: rgb(130, 178, 178);
+			}
+
+		}
+
+
+	}
+
+	#ptero_index_pic {
+		bottom: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: -1;
 	}
 	
 

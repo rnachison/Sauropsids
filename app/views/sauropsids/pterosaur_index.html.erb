@@ -23,7 +23,9 @@
 	        <li>	
 				<div class="user_header">
 					<% if current_user %>
-					  <%= current_user.email %>
+					  <%= link_to(current_user, html_options = {class: "user_header"}) do %>
+					  	<%= current_user.name %>'s Page
+					  	<% end %>
 					  <%= link_to "Log Out", logout_path, :class => "user_header" %>
 					<% else %>
 					  <%= link_to "Sign Up", signup_path, :class => "user_header" %> or
@@ -43,23 +45,25 @@
 
 	<h1 id="ptero_headline">Pterosaurs</h1>
 
+
 	<div id="ptero_info">
-		<ul>
+		<ul class="ptero_list">
 			<% @sauropsids.each do |s| %>
 			 	
-				<li>
-					<%= link_to(sauropsid_path(s)) do %>
-						<strong><%= s.name %></strong><br>
+				<li class="ptero_list">
+					<br>
+					<%= link_to(s, html_options = {id: "ptero_list_name"}) do %>
+						<strong>• <%= s.name %> •</strong><br>
 					<% end %>
-					<%= s.age %><br>
-					<%= s.species %><br>
-					<%= s.location %><br>
+					<%= s.age %> years old — <%= s.species %><br>
+					<%= s.location %>
+					<br>
 				</li>
 
 			<% end %>
 		</ul>
 	</div>
 
-	<%= image_tag "pteranodon_by_zdenek_burian_1960.jpg", size:"463x463", alt: "pteronadon_water", class: "img-circle" %>
+		<%= image_tag "pteranodon_by_zdenek_burian_1960.jpg", size:"463x463", alt: "pteronadon_water", class: "img-circle", id: "ptero_index_pic" %>
 
 </body>

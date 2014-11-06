@@ -1,7 +1,7 @@
 <body class="chordate_index">
 	<div class="user_header">
 		<% if current_user %>
-		  <%= current_user.email %>
+		  <%= current_user.name %>
 		  <%= link_to "Log Out", logout_path, :class => "user_header" %>
 		<% else %>
 		  <%= link_to "Sign Up", signup_path, :class => "user_header" %> or
