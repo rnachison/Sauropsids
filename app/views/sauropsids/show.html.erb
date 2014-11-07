@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 
 </head>
 
@@ -50,7 +50,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<h1 id="sauropsid_name"><%= @sauropsid.name %></h1>
+	<h1 id="sauropsid_name" ><%= @sauropsid.name %></h1>
 	<%= @sauropsid.location %><br>
 	<%= @sauropsid.age %> years old<br>
 	<%= @sauropsid.species %><br>
@@ -68,6 +68,7 @@
 	<% else %>
 		<%= button_to 'ADOPT ME', :action => 'adopt' %>
 	<% end %>
+
 
 	<div id="map-canvas"></div>
 
