@@ -12,7 +12,7 @@ class SauropsidsController < ApplicationController
 	end
 
 	def create
-		@sauropsid = Sauropsid.new(params.require(:sauropsid).permit(:order, :name, :age, :species, :location, :wingspan, :weight, :length))
+		@sauropsid = Sauropsid.new(params.require(:sauropsid).permit(:order, :name, :age, :species, :location, :wingspan, :weight, :length, :image))
 		if @sauropsid.save
 			redirect_to sauropsids_path
 		else
@@ -26,7 +26,7 @@ class SauropsidsController < ApplicationController
 
 	def update
 		@sauropsid = Sauropsid.find(params[:id])
-		if @sauropsid.update_attributes(params.require(:sauropsid).permit(:order, :name, :age, :species, :location, :wingspan, :weight, :length))
+		if @sauropsid.update_attributes(params.require(:sauropsid).permit(:order, :name, :age, :species, :location, :wingspan, :weight, :length, :image))
 			redirect_to sauropsid_path
 		else
 			render 'edit'

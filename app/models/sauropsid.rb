@@ -9,6 +9,7 @@ class Sauropsid
   field :weight, type: Float
   field :length, type: Float
   field :is_adopted, type: Mongoid::Boolean
+  field :image, type: String
 
   belongs_to :user
 end
