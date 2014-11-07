@@ -1,0 +1,62 @@
+$paragraph: 'Bad Script', cursive;
+$handwriting: 'Homemade Apple', cursive;
+$textcolor: rgb(5, 85, 93);
+$peach: rgb(255, 146, 113);
+$coral: rgb(255, 146, 155);
+$whitesmoke: rgb(248,248,248);
+$lavender: rgb(250, 133, 255);
+$khaki: rgb(246,233,131);
+$mediumpurple: rgb(176,123,195);
+$cadetblue: rgb(82,157,178);
+$lightpink: rgb(255,168,195);
+$lightskyblue: rgb(142,230,255);
+$violet: rgb(255, 168, 255);
+$mediumaquamarine: rgb(103,204,142);
+
+
+body#show_saurops {
+
+	height: 100%;
+	width: 100%;
+	text-align: center;
+
+		.navbar {
+
+		// background-color: rgba(153, 142, 129, .8);
+		border-bottom: 6px solid $peach;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+
+		.saur_bar {
+
+			font-family: $paragraph;
+			color: $mediumpurple;
+		}
+
+		.saur_bar:hover {
+			color: $lavender;
+		}
+
+
+		.user_header {
+
+			padding: 15px 5px;
+			font-size: 18px;
+			line-height: 20px;
+			height: 50px;
+			text-decoration: none;
+			color: $peach;
+		}
+
+		.user_header:hover {
+			color: $lavender;
+		}
+
+	}
+
+	#sauropsid_name {
+
+		margin-top: 150px;
+	}
+
+}
