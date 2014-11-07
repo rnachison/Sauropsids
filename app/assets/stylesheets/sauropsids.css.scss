@@ -6,11 +6,13 @@ $peach: rgb(255, 146, 113);
 $coral: rgb(255, 146, 155);
 $whitesmoke: rgb(248,248,248);
 $lavender: rgb(250, 133, 255);
+$khaki: rgb(246,233,131);
+$mediumpurple: rgb(176,123,195);
 
 
 // INDEX/ROOT/WELCOME PAGE
 
-body.chordate_index {
+body.sauropsid_index {
 
 	background-image: url(image_path('dino_fight.jpg'));
 	background-repeat: no-repeat;
@@ -20,6 +22,46 @@ body.chordate_index {
 	width: 100%;
 
 
+	.user_header {
+
+	padding: 10px;
+	margin: -5px 0px 0px 0px;
+	text-decoration: none;
+	background-color: rgba(248, 248, 248, .4);
+	width: 200px;
+	position: absolute; 
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	border: 2px solid $khaki;
+	border-radius: 20px;
+
+		.user_links {
+
+			text-align: center;
+			font-family: $paragraph;
+			color: $mediumpurple;
+			font-size: 18px;
+			padding-left: 10px;
+
+		}
+	
+
+		.user_links:hover {
+
+			color: $lavender;
+			text-decoration: none;
+	}
+
+		#pipe {
+			display: inline;
+		}
+
+		#pipe:hover {
+			color: $mediumpurple;
+		}
+
+	}
 	#welcome {
 
 		// height: 150px;
@@ -31,36 +73,45 @@ body.chordate_index {
 
 			font-family: $handwriting;
 			font-size: 108px;
-			color: $peach
+			color: $mediumpurple;
 
 	}
 
 	#sky_paragraph {
 
-		height: 60px;
-		width: 840px / 1197px * 100%;
-		background-color: rgba(153, 142, 129, .65);
-		margin: 300px auto 0 auto;
-		border: 4px solid $coral;
-		border-radius: 10px;
+		// height: 60px;
+		// width: 840px / 1197px * 100%;
+		// background-color: rgba(248, 248, 248, .7);
+		// margin: 300px auto 0 auto;
+		// border: 3px solid $khaki;
+		// border-radius: 10px;
 
-		p {
-			font-family: $handwriting;
-			font-size: 22px;
-			color: $peach;
-			margin: auto;
-			padding-top: 12px;
-		}
+		// p {
+		// 	font-family: $handwriting;
+		// 	font-size: 22px;
+		// 	color: $mediumpurple;
+		// 	margin: auto;
+		// 	padding-top: 12px;
+		// }
 
 	}
 
 	.pet_option {
-		margin: 50px auto 0px auto;
-		height: 60px;
-		background-color: rgba(153, 142, 129, .6);
-		border: 4px solid $coral;
-		border-radius: 10px;
-		width: 678px;
+		margin: 300px auto 0px auto;
+		padding-bottom: 20px;
+		background-color: rgba(248, 248, 248, .7);
+		border: 3px solid $khaki;
+		border-radius: 20px;
+		width: 840px;
+
+
+		p {
+			font-family: $handwriting;
+			font-size: 22px;
+			color: $mediumpurple;
+			margin: 20px auto 30px auto;
+			padding-top: 12px;
+		}
 
 		.index_button {
 			display: inline;
@@ -68,9 +119,15 @@ body.chordate_index {
 			margin: 6px 40px auto 40px;
 			height: 40px;
 			width: 133px;
-			background-color: $peach;
-			border: 4px solid $coral;
-			color: rgba(107, 99, 90, 1);
+			background-color: $mediumpurple;
+			border: 2px solid $khaki;
+			color: $khaki;
+		}
+
+		.index_button:hover {
+			background-color: $lavender;
+			color: $whitesmoke;
+			border: 3px solid $whitesmoke;
 		}
 
 		.index_button_text {

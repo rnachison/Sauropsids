@@ -22,10 +22,22 @@ $peach: rgb(255, 146, 113);
 $coral: rgb(255, 146, 155);
 $whitesmoke: rgb(248,248,248);
 $lavender: rgb(250, 133, 255);
+$khaki: rgb(246,233,131);
+$mediumpurple: rgb(176,123,195);
 
 .user_header {
 
 	text-align: right;
 	font-family: $paragraph;
-	color: $peach;
+	color: $mediumpurple;
+	font-size: 18px;
+	padding: 10px 0px 0px 10px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.user_header:hover {
+
+	color: $lavender;
+	text-decoration: none;
 }

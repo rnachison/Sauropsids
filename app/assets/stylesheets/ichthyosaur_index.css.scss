@@ -7,30 +7,24 @@ $whitesmoke: rgb(248,248,248);
 $lavender: rgb(250, 133, 255);
 $khaki: rgb(246,233,131);
 $mediumpurple: rgb(176,123,195);
-$cadetblue: rgb(82,157,178);
-$lightpink: rgb(255,168,195);
-$lightskyblue: rgb(142,230,255);
-$violet: rgb(255, 168, 255);
-$mediumaquamarine: rgb(103,204,142);
 
-
-body.ptero_index {
+body.ichthyo_index {
 
 	height: 100%;
 	width: 100%;
-	background-color: $mediumpurple;
+	background-color: $peach;
 
 	.navbar {
 
 		// background-color: rgba(153, 142, 129, .8);
-		border-bottom: 6px solid $peach;
+		border-bottom: 6px solid $lavender;
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
 
 		.saur_bar {
 
 			font-family: $paragraph;
-			color: $mediumpurple;
+			color: $peach;
 		}
 
 		.saur_bar:hover {
@@ -45,7 +39,7 @@ body.ptero_index {
 			line-height: 20px;
 			height: 50px;
 			text-decoration: none;
-			color: $peach;
+			list-style-type: none;
 		}
 
 		.user_header:hover {
@@ -54,7 +48,7 @@ body.ptero_index {
 
 	}
 
-	#ptero_headline {
+	#ichthyo_headline {
 		text-align: center;
 		font-family: $handwriting;
 		font-size: 80px;
@@ -62,33 +56,32 @@ body.ptero_index {
 		color: $whitesmoke;
 	}
 
-	#ptero_info {
+	#ichthyo_info {
 
 		// height: 100px;
 		width: 300px;
 		background-color: $whitesmoke;
 		margin: auto;
 		padding-bottom: 10px;
-		border: 5px solid $peach;
+		border: 5px solid $lavender;
 		border-radius: 15px;
 
 
-		.ptero_list {
+		.ichthyo_list {
 
-			color: $mediumpurple;
+			color: $peach;
 			text-align: center;
 			padding-left: 0px;
 			font-family: $paragraph;
 			font-size: 20px;
-			list-style-type: none;
 
-			#ptero_list_name {
-			color: $peach;
+			#ichthyo_list_name {
+			color: $lavender;
 			text-decoration: none;
 			}
 
-			#ptero_list_name:hover {
-				color: $lavender;
+			#ichthyo_list_name:hover {
+				color: rgb(130, 178, 178);
 			}
 
 		}
@@ -96,7 +89,7 @@ body.ptero_index {
 
 	}
 
-	#ptero_index_pic {
+	#ichthyo_index_pic {
 		bottom: 0px;
 		left: 0px;
 		position: fixed;

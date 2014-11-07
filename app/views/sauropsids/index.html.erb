@@ -1,12 +1,14 @@
-<body class="chordate_index">
+<body class="sauropsid_index">
 	<div class="user_header">
-		<% if current_user %>
-		  <%= current_user.name %>
-		  <%= link_to "Log Out", logout_path, :class => "user_header" %>
-		<% else %>
-		  <%= link_to "Sign Up", signup_path, :class => "user_header" %> or
-		  <%= link_to "Log In", login_path, :class => "user_header" %>
-		<% end %>
+        <% if current_user %>
+            <%= link_to(current_user, html_options = {class: "user_links"}) do %>
+                <%= current_user.name %>'s Page
+            <% end %>
+            <%= link_to "Log Out", logout_path, :class => "user_links" %>
+        <% else %>
+            <%= link_to "Sign Up", signup_path, :class => "user_links" %> or
+            <%= link_to "Log In", login_path, :class => "user_links" %>
+        <% end %>
 	</div>
 	<% flash.each do |name,msg| %>
 		<%= content_tag :div, msg, id: "flash_#{name}" %>
@@ -14,11 +16,11 @@
 
 	<h1 id="welcome">Welcome</h1>
 
-	<div id="sky_paragraph">
-		<p>Are you interested adopting a pterosaur or an ichthyosaur?</p>
-	</div>
-
 	<div class="pet_option">
+		<p>Are you interested adopting a pterosaur or an ichthyosaur?</p>
+<!-- 	</div> -->
+
+<!-- 	<div class="pet_option"> -->
 			<%= link_to '<button type="button" class="index_button">PTEROSAUR</button>'.html_safe, pterosaur_index_path, :class => "index_button_text" %>
 
 			<%= link_to '<button type="button" class="index_button">ICHTHYOSAUR</button>'.html_safe, ichthyosaur_index_path, :class => "index_button_text" %>
