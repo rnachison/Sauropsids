@@ -24,7 +24,7 @@ body#show_saurops {
 		.navbar {
 
 		// background-color: rgba(153, 142, 129, .8);
-		border-bottom: 6px solid $peach;
+		border-bottom: 6px solid $lavender;
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
 
@@ -55,9 +55,25 @@ body#show_saurops {
 
 	}
 
-	#sauropsid_name {
 
-		margin-top: 150px;
-	}
+		#show_info {
+
+			background-color: $whitesmoke;
+			font-family: $paragraph;
+			color: $peach;
+			padding: 20px;
+			width: 300px;
+			margin: 200px auto 0 auto;
+	
+
+			#sauropsid_name {
+
+				color: $mediumpurple;
+			}
+
+
+		}
+
+
 
 }

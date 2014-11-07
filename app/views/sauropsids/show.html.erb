@@ -50,27 +50,26 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-	<h1 id="sauropsid_name" ><%= @sauropsid.name %></h1>
-	<%= @sauropsid.location %><br>
-	<%= @sauropsid.age %> years old<br>
-	<%= @sauropsid.species %><br>
-	<% if @sauropsid.order == 'pterosaur' %>
-		<%= @sauropsid.wingspan %>
-		<%= @sauropsid.weight %>
-	<% else %>
-		<% if @sauropsid.order == 'ichthyosaur' %>
-			<%= @sauropsid.length %>
-			<% end %>
-	<% end %>
+	<div id="show_info">
+		<h1 id="sauropsid_name" ><%= @sauropsid.name %></h1>
+		<%= @sauropsid.location %><br>
+		<%= @sauropsid.age %> years old<br>
+		<%= @sauropsid.species %><br>
+		<% if @sauropsid.order == 'pterosaur' %>
+			<%= @sauropsid.wingspan %>
+			<%= @sauropsid.weight %>
+		<% else %>
+			<% if @sauropsid.order == 'ichthyosaur' %>
+				<%= @sauropsid.length %>
+				<% end %>
+		<% end %>
 
-	<% if @sauropsid.is_adopted == true %>
-		<p>Already found a home!</p>
-	<% else %>
-		<%= button_to 'ADOPT ME', :action => 'adopt' %>
-	<% end %>
-
-
-	<div id="map-canvas"></div>
+		<% if @sauropsid.is_adopted == true %>
+			<p>Already found a home!</p>
+		<% else %>
+			<%= button_to 'ADOPT ME', :action => 'adopt' %>
+		<% end %>
+	</div>
 
 </body>
 </html>
