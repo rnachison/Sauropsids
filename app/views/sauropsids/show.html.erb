@@ -15,6 +15,8 @@
             var mapOptions = {
             zoom: 4,
             center: {<%= @sauropsid.latlng %>},
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
           }
           var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions)
 
@@ -102,6 +104,12 @@
 		<%= image_tag @sauropsid.image, size:"400x400", alt: "sauropsid_pic", class: "img-circle", id: "saurop_pic"%>
 	</div>
 
+
+    <div class="contained_map">
+        <h2 id="my_spot">Where I live now!:</h2>
+        <div id="map-canvas"></div>
+    </div>
+
 	<div id="show_info">
 		<strong><%= @sauropsid.species %></strong><br><br>
 		<%= @sauropsid.age %> years old<br><br>
@@ -121,9 +129,6 @@
 		<% else %>
 			<%= button_to 'ADOPT ME', { :action => 'adopt' }, { :class => "adopt_button" } %>
 		<% end %>
-
-
-			<div id="map-canvas"></div>
 
 
 </body>

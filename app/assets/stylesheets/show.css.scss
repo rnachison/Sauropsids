@@ -79,11 +79,11 @@ body#show_saurops {
 			font-family: $paragraph;
 			font-size: 25px;
 			color: $coral;
-			padding: 20px;
+			padding: 50px;
 			width: 300px;
 			margin: 60px auto 0 auto;
 			border: 4px solid $coral;
-			border-radius: 20px;
+			border-radius: 50px;
 	
 		}
 
@@ -119,13 +119,27 @@ body#show_saurops {
 			font-size: 20px;
 		}
 
-		#map-canvas {
+		.contained_map {
+
 			height: 400px;
 			width: 400px;
 			position: absolute;
-			bottom: 10px;
-			left: 10px;
-		}
+			bottom: 80px;
+			left: 20px;
 
+			#my_spot {
+				font-family: $handwriting;
+				color: $whitesmoke;
+			}
+
+
+			#map-canvas {
+
+				border-radius: 50%;
+				border: 4px solid $coral;
+				line-height: 20px;
+			}
+
+		}
 
 }
