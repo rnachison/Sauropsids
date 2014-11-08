@@ -10,8 +10,8 @@ class Sauropsid
   field :length, type: Float
   field :is_adopted, type: Mongoid::Boolean
   field :image, type: String
-  field :lat, type: Integer
-  field :lng, type: Integer
+  field :lat, type: Float
+  field :lng, type: Float
 
 
   belongs_to :user
