@@ -121,10 +121,8 @@ body#show_saurops {
 
 		.contained_map {
 
-			height: 400px;
-			width: 400px;
 			position: absolute;
-			bottom: 80px;
+			bottom: 20px;
 			left: 20px;
 
 			#my_spot {
@@ -135,9 +133,10 @@ body#show_saurops {
 
 			#map-canvas {
 
+				height: 400px;
+				width: 400px;
 				border-radius: 50%;
 				border: 4px solid $coral;
-				line-height: 20px;
 			}
 
 		}

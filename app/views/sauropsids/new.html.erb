@@ -1,7 +1,7 @@
 <% if current_user %>
 	<% if current_user.email == "rrn2110@tc.columbia.edu" %>
 		<%= form_for @sauropsid do |s| %>
-			<h2>ADD NEW SAUROPSIDA</h2>
+			<h2>ADD NEW SAUROPSID</h2>
 			<p>
 				Order:<%= s.text_field :order %>
 			</p>
@@ -18,7 +18,10 @@
 				Location:<%= s.text_field :location %>
 			</p>
 			<p>
-				Lat/Lng:<%= s.text_field :latlng %>
+				Latitude:<%= s.text_field :lat %>
+			</p>
+			<p>
+				Longitude:<%= s.text_field :lng %>
 			</p>
 			<p>
 				Wingspan:<%= s.text_field :wingspan %>

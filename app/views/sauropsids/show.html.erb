@@ -12,9 +12,10 @@
     <script type="text/javascript">
 
         function initialize() {
+            var myLatlng = new google.maps.LatLng(<%= @sauropsid.lat %>, <%= @sauropsid.lng %>);
             var mapOptions = {
-            zoom: 4,
-            center: {<%= @sauropsid.latlng %>},
+            zoom: 10,
+            center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
           }
@@ -22,7 +23,7 @@
 
 
           var marker = new google.maps.Marker({
-              position: {<%= @sauropsid.latlng %>},
+              position: myLatlng,
               map: map,
               title: 'Hello World!'
           });
