@@ -14,10 +14,10 @@
         function initialize() {
             var myLatlng = new google.maps.LatLng(<%= @sauropsid.lat %>, <%= @sauropsid.lng %>);
             var mapOptions = {
-            zoom: 10,
+            zoom: 3,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
+            styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#8EF1DD"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill"},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#73D4C0"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]}]
           }
           var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions)
 

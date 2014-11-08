@@ -7,30 +7,30 @@ $whitesmoke: rgb(248,248,248);
 $lavender: rgb(250, 133, 255);
 $khaki: rgb(246,233,131);
 $mediumpurple: rgb(176,123,195);
-$cadetblue: rgb(82,157,178);
 $lightpink: rgb(255,168,195);
 $lightskyblue: rgb(142,230,255);
 $violet: rgb(255, 168, 255);
-$mediumaquamarine: rgb(103,204,142);
-
+$mediumaquamarine: rgb(115,212,192);
+$brown: rgb(178, 120, 64);
 
 body.ptero_index {
 
 	height: 100%;
 	width: 100%;
-	background-color: rgb(2, 15, 89);
+	background-color: $lightskyblue;
 
 	.navbar {
 
 		// background-color: rgba(153, 142, 129, .8);
-		border-bottom: 6px solid rgb(242, 48, 120);
+		border-bottom: 6px solid $khaki;
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
+		background-color: $brown;
 
 		.saur_bar {
 
 			font-family: $paragraph;
-			color: rgb(242, 48, 120);
+			color: $whitesmoke;
 		}
 
 		.saur_bar:hover {
@@ -45,7 +45,7 @@ body.ptero_index {
 			line-height: 20px;
 			height: 50px;
 			text-decoration: none;
-			color: rgb(2, 15, 89);
+			color: $khaki;
 		}
 
 		.user_header:hover {
@@ -65,17 +65,17 @@ body.ptero_index {
 	#ptero_info {
 
 		// height: 100px;
-		width: 300px;
-		background-color: rgb(4, 7, 64);
+		width: 400px;
+		background-color: $brown;
 		margin: auto;
 		padding-bottom: 10px;
-		border: 5px solid rgb(242, 48, 120);
+		border: 5px solid $khaki;
 		border-radius: 15px;
 
 
 		.ptero_list {
 
-			color: $whitesmoke;
+			color: $khaki;
 			text-align: center;
 			padding-left: 0px;
 			font-family: $paragraph;
@@ -83,7 +83,7 @@ body.ptero_index {
 			list-style-type: none;
 
 			#ptero_list_name {
-			color: rgb(242, 48, 120);
+			color: $whitesmoke;
 			text-decoration: none;
 			}
 
@@ -101,6 +101,7 @@ body.ptero_index {
 		left: 10px;
 		position: fixed;
 		z-index: -1;
+		border: 4px solid $khaki;
 	}
 	
 
