@@ -1,3 +1,119 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$paragraph: 'Bad Script', cursive;
+$handwriting: 'Homemade Apple', cursive;
+$peach: rgb(255, 146, 113);
+$coral: rgb(255, 146, 155);
+$whitesmoke: rgb(248,248,248);
+$lavender: rgb(250, 133, 255);
+$khaki: rgb(246,233,131);
+$mediumpurple: rgb(176,123,195);
+$lightpink: rgb(255,168,195);
+$lightskyblue: rgb(142,230,255);
+$violet: rgb(255, 168, 255);
+$mediumaquamarine: rgb(115,212,192);
+$brown: rgb(178, 120, 64);
+$darkslategray: rgb(76,70,57);
+
+
+body.login_page {
+
+
+	height: 100%;
+	width: 100%;
+	background-image: url(image_path('Great_Sea-Dragons.jpg'));
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+	.navbar {
+
+		// background-color: rgba(153, 142, 129, .8);
+		border-bottom: 6px solid $whitesmoke;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		background-color: $lightskyblue;
+
+		.saur_bar {
+
+			font-family: $paragraph;
+			color: $darkslategray;
+		}
+
+		.saur_bar:hover {
+			color: $lavender;
+		}
+
+
+		.user_header {
+
+			padding: 15px 5px;
+			font-size: 18px;
+			line-height: 20px;
+			height: 50px;
+			text-decoration: none;
+			color: $whitesmoke;
+		}
+
+		.user_header:hover {
+			color: $lavender;
+		}
+
+	}
+
+	#login_error_messages {
+
+		color: $lightskyblue;
+		font-family: $handwriting;
+		font-size: 30px;
+		margin: 100px;
+
+
+		#login_headline {
+
+			padding-top: 40px;
+			font-family: $handwriting;
+			color: $lightskyblue;
+			font-size: 80px;
+		}
+
+	}
+
+
+
+	.login_form {
+
+		margin-top: 60px;
+
+
+		.field {
+
+			font-family: $paragraph;
+			color: $lightskyblue;
+			font-size: 20px;
+			padding: 20px;
+			
+		}
+
+		.submit_button {
+
+			background-color: $lightskyblue;
+			font-family: $paragraph;
+			padding: 10px 30px;
+			border: 2px solid $whitesmoke;
+			border-radius: 20px;
+			color: $darkslategray;
+			font-size: 20px;
+		}
+
+		.submit_button:hover {
+
+			background-color: $whitesmoke;
+		}
+	}
+
+}
+

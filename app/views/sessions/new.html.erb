@@ -32,10 +32,7 @@
 					  <%= link_to "Log In", login_path, :class => "user_header" %>
 					<% end %>
 				</div>
-				<% flash.each do |name,msg| %>
-					<%= content_tag :div, msg, id: "flash_#{name}" %>
-				<% end %>
-		</li>
+			</li>
 	          </ul>
 	        </li>
 	      </ul>
@@ -43,8 +40,16 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
+			<div id='login_error_messages'>
+				<% flash.each do |name,msg| %>
+					<%= content_tag :div, msg, id: "flash_#{name}" %>
+				<% end %>
 
-	<h1 id='login_headline'>Log In</h1>
+				<h1 id='login_headline'>Log In</h1>
+			</div>
+
+
+
 
 	<div class='login_form'>
 		<%= form_tag sessions_path do %>
@@ -56,7 +61,7 @@
 		    <%= label_tag :password %><br />
 		    <%= password_field_tag :password %>
 		  </div>
-		  <div class="actions"><%= submit_tag "Log In" %></div>
+		  <div class="actions"><%= submit_tag "LOG IN", :class => 'submit_button' %></div>
 		<% end %>
 	</div>
 

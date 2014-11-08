@@ -1,32 +1,79 @@
-<h1>Sign Up!</h1>
+<body class="login_page">
 
-<%= form_for @user do |u| %>
-	<% if @user.errors.any? %>
-		<div class="error_messages">
-			<h2>Form is invalid</h2>
-			<ul>
-		        <% @user.errors.full_messages.each do |message| %>
-		          <li><%= message %></li>
-		        <% end %>
-        	</ul>
-		</div>
-	<% end %>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <%= link_to 'Home', sauropsids_path, :class => "navbar-brand saur_bar" %>
+	    </div>
 
-	<div class="field">
-    <%= u.label :name %><br />
-    <%= u.text_field :name %>
-	  </div>
-	<div class="field">
-    <%= u.label :email %><br />
-    <%= u.text_field :email %>
-	  </div>
-	  <div class="field">
-	    <%= u.label :password %><br />
-	    <%= u.password_field :password %>
-	  </div>
-	  <div class="field">
-	    <%= u.label :password_confirmation %><br />
-	    <%= u.password_field :password_confirmation %>
-	  </div>
-	  <div class="actions"><%= u.submit "Sign Up" %></div>
-<% end %>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <%= link_to 'Pterosaurs', pterosaur_index_path, :class => "navbar-brand saur_bar" %>
+	        <%= link_to 'Ichthyosaurs', ichthyosaur_index_path, :class => "navbar-brand saur_bar" %>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li>	
+				<div class="user_header">
+					<% if current_user %>
+					  <%= link_to(current_user, html_options = {class: "user_header"}) do %>
+					  	<%= current_user.name %>'s Page
+					  	<% end %>
+					  <%= link_to "Log Out", logout_path, :class => "user_header" %>
+					<% else %>
+					  <%= link_to "Sign Up", signup_path, :class => "user_header" %> 
+					  <%= link_to "Log In", login_path, :class => "user_header" %>
+					<% end %>
+				</div>
+				<% flash.each do |name,msg| %>
+					<%= content_tag :div, msg, id: "flash_#{name}" %>
+				<% end %>
+		</li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+
+	<h1 id="signin_headline">Sign Up!</h1>
+
+	<div class='login_form'>
+		<%= form_for @user do |u| %>
+			<% if @user.errors.any? %>
+				<div class="error_messages">
+				        <% @user.errors.full_messages.each do |message| %>
+				          * <%= message %> *<br>
+				        <% end %>
+				</div>
+			<% end %>
+
+			<div class="field">
+		    <%= u.label :name %><br />
+		    <%= u.text_field :name %>
+			  </div>
+			<div class="field">
+		    <%= u.label :email %><br />
+		    <%= u.text_field :email %>
+			  </div>
+			  <div class="field">
+			    <%= u.label :password %><br />
+			    <%= u.password_field :password %>
+			  </div>
+			  <div class="field">
+			    <%= u.label :password_confirmation %><br />
+			    <%= u.password_field :password_confirmation %>
+			  </div>
+			  <div class="actions"><%= u.submit "SIGN UP" , :class => 'submit_button'%></div>
+		<% end %>
+	</div>
+
+</body>
