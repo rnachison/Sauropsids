@@ -6,6 +6,8 @@ gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+gem 'jquery-turbolinks'
+
 # get your mongo
 gem "mongoid", github: "mongoid/mongoid"
 gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"

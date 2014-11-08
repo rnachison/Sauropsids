@@ -36,7 +36,7 @@
 				<%= s.submit "UPDATE" %>
 			</p>
 			<p>
-				<%= link_to 'DELETE', delete_sauropsid_path(s), :action => 'destroy', :method => 'delete', :confirm => 'Are you sure?' %>
+				<%= link_to 'DELETE', :sauropsid, method: :delete, data: { confirm: 'Are you sure?' } %>
 			</p>
 		<% end %>
 	<% else %>

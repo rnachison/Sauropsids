@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!--     Add Google Maps -->
     <style type="text/css">
       html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
     </style>
@@ -8,12 +10,14 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAj4tt0j8Q2kWkpsmql-nHnIQwWxIw3gk">
     </script>
     <script type="text/javascript">
-      function initialize() {
-          var mapOptions = {
+
+        function initialize() {
+            var mapOptions = {
             zoom: 4,
             center: {<%= @sauropsid.latlng %>},
           }
-          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions)
+
 
           var marker = new google.maps.Marker({
               position: {<%= @sauropsid.latlng %>},
@@ -21,8 +25,27 @@
               title: 'Hello World!'
           });
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
-      google.maps.event.addDomListener(window, 'page:load', initialize);
+
+      // For asynchronous loading
+
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+                'callback=initialize';
+            document.body.appendChild(script);
+        }
+
+        // window.onload = loadScript;
+        // window.on("page:load", loadScript);
+
+        $.getScript('/assets/application.js',function(){
+                $(document).ready(loadScript); //calls for the function we defined above (first loading)
+                $(document).on('page:load',loadScript); // the same but for the other loadings
+              });
+
+      // google.maps.event.addDomListener(window, 'load', initialize);
+      // google.maps.event.addDomListener(window, 'page:load', initialize);
       </script>
 </head>
 
