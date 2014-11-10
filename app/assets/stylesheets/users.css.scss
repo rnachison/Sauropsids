@@ -170,10 +170,11 @@ body.user_page {
 		color: $lightskyblue;
 		width: 80%;
 
-		#user_headline {
+		.user_headline {
 
 			font-family: $handwriting;
 			margin-top: 100px;
+			padding-bottom: 23px;
 			color: $darkslategray;
 		}
 

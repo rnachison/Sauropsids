@@ -45,7 +45,7 @@
 	<div class='adopted_sauropsids'>
 			<% if current_user  %>
 				<% if current_user.sauropsids.length > 0 %>
-					<h1 id="user_headline"><%= current_user.name %>'s Adopted Sauropsids!</h1>
+					<h1 class="user_headline"><%= current_user.name %>'s Adopted Sauropsids!</h1>
 					<% current_user.sauropsids.each do |s| %>
 					<div class="row">
 						<div class="col-md-3"></div>
@@ -57,7 +57,7 @@
 						</div>
 					<% end %>
 					<% else %>
-						No Adopted Sauropsids to show yet..
+						<h1 class='user_headline'>Nobody's Here!</h1>
 					<% end %>
 			<% else %>
 				Log in please!
