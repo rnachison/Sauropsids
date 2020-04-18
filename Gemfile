@@ -12,6 +12,7 @@ gem 'jquery-turbolinks'
 gem "mongoid", github: "mongoid/mongoid"
 gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"
 
+gem "actionview"
 
 group :test, :development do
 	gem 'mongoid-rspec'
